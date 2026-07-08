@@ -9,3 +9,6 @@
 
 # Ignore compiled Java class files
 *.class
+
+# Ignore downloaded jar libraries
+*.jar
