@@ -1,0 +1,11 @@
+# Ignore all files/folders in the root directory by default
+/*
+
+# Do NOT ignore the week1 directory and its contents
+!/week1/
+
+# Do NOT ignore this .gitignore file itself
+!/.gitignore
+
+# Ignore compiled Java class files
+*.class
