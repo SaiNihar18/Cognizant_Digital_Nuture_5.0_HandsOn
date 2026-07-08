@@ -1,44 +1,34 @@
 # Week 1: Java FSE Hands-On Exercises
 
-This folder contains the implementations for the mandatory hands-on exercises for the **Design Patterns and Principles** module. These implementations focus on clean, fundamental Java code to facilitate learning and core understanding.
+This folder contains the implementations for the mandatory hands-on exercises of Week 1, covering **Design Patterns and Principles** and **Data Structures and Algorithms**. These implementations are flat (no nested `src/com/example/...` packages) and do not contain any comments, prioritizing direct learning and clean, raw Java.
 
 ---
 
 ## 1. Design Patterns and Principles
 
 ### Exercise 1: Singleton Pattern (`SingletonPatternExample`)
+- **Logger.java**: Thread-safe Logger utility class using a private constructor, volatile static instance, and double-checked locking lazy initialization.
+- **SingletonTest.java**: Test client validating that both retrieved instances share the same reference, and testing log operations.
 
-#### Scenario & Objective
-You need to ensure that a logging utility class in your application has only one instance throughout the application lifecycle to guarantee consistent logging behavior.
-
-#### Key Design Decisions
-- **Private Constructor**: Prevents instantiation of the class from outside the `Logger` class.
-- **Private Static Volatile Instance**: Holds the single shared reference. The `volatile` keyword prevents memory write re-ordering issues and ensures changes are immediately visible to all threads.
-- **Double-Checked Locking**: Thread-safe lazy-initialization inside the `getInstance()` method. It synchronizes only on the first instantiation attempt, avoiding high synchronization overhead on subsequent calls.
-
-#### Package & Classes
-- **`com.example.singleton`**
-  - `Logger`: The Singleton class managing the logging instance.
-  - `SingletonTest`: Client/Test class showing that multiple variables retrieve the same object reference, and verifying logging works.
+### Exercise 2: Factory Method Pattern (`FactoryMethodPatternExample`)
+- **Document.java**: Product interface with standard operations (`open()`, `save()`, `close()`).
+- **WordDocument.java**, **PdfDocument.java**, **ExcelDocument.java**: Concrete Product implementations of `Document`.
+- **DocumentFactory.java**: Abstract Creator defining the factory method `createDocument()`.
+- **WordDocumentFactory.java**, **PdfDocumentFactory.java**, **ExcelDocumentFactory.java**: Concrete Creator subclasses implementing the factory method.
+- **FactoryMethodTest.java**: Test client demonstrating instantiation and operations for all document types.
 
 ---
 
-### Exercise 2: Factory Method Pattern (`FactoryMethodPatternExample`)
+## 2. Data Structures and Algorithms
 
-#### Scenario & Objective
-You are developing a document management system that needs to create different types of documents (e.g., Word, PDF, Excel). The system must be decoupled from the concrete classes of documents it instantiates, allowing new document types to be added easily.
+### Exercise 2: E-commerce Platform Search Function (`EcommerceSearch`)
+- **Product.java**: Product class with fields `productId`, `productName`, and `category`.
+- **SearchAlgorithms.java**: Linear search ($O(N)$) and binary search ($O(\log N)$) algorithms.
+- **SearchTest.java**: Test client sorting the array of products and benchmarking both searching algorithms.
 
-#### Key Design Decisions
-- **Decoupled Architecture**: The client interacts with the general `Document` interface and `DocumentFactory` abstract creator rather than concrete implementations.
-- **Polymorphism / Factory Method**: Concrete creator classes (`WordDocumentFactory`, `PdfDocumentFactory`, `ExcelDocumentFactory`) override `createDocument()` to return their respective concrete product instances.
-
-#### Package & Classes
-- **`com.example.factory`**
-  - `Document`: Product interface with standard operations (`open()`, `save()`, `close()`).
-  - `WordDocument`, `PdfDocument`, `ExcelDocument`: Concrete Products implementing `Document`.
-  - `DocumentFactory`: Abstract Creator defining `createDocument()`.
-  - `WordDocumentFactory`, `PdfDocumentFactory`, `ExcelDocumentFactory`: Concrete Creators implementing the factory method.
-  - `FactoryMethodTest`: Client/Test class to verify operations on each document type via factories.
+### Exercise 7: Financial Forecasting (`FinancialForecasting`)
+- **FinancialForecasting.java**: Recursive algorithm predicting future values based on past growth rates.
+- **ForecastingTest.java**: Test client executing the recursive calculator over a 10-year forecast period.
 
 ---
 
@@ -48,24 +38,40 @@ To compile and run these exercises, make sure you have the Java Development Kit 
 
 ### 1. Singleton Pattern Example
 ```bash
-# Navigate to the Singleton src folder
-cd "week1/Design Patterns and Principles/SingletonPatternExample/src"
+# Navigate to the Singleton directory
+cd "week1/Design Patterns and Principles/SingletonPatternExample"
 
-# Compile all classes in the package
-javac com/example/singleton/*.java
-
-# Run the test class
-java com.example.singleton.SingletonTest
+# Compile and Run
+javac *.java
+java SingletonTest
 ```
 
 ### 2. Factory Method Pattern Example
 ```bash
-# Navigate to the Factory Method src folder
-cd "week1/Design Patterns and Principles/FactoryMethodPatternExample/src"
+# Navigate to the Factory Method directory
+cd "week1/Design Patterns and Principles/FactoryMethodPatternExample"
 
-# Compile all classes in the package
-javac com/example/factory/*.java
+# Compile and Run
+javac *.java
+java FactoryMethodTest
+```
 
-# Run the test class
-java com.example.factory.FactoryMethodTest
+### 3. E-commerce Search Function
+```bash
+# Navigate to the EcommerceSearch directory
+cd "week1/Data Structures and Algorithms/EcommerceSearch"
+
+# Compile and Run
+javac *.java
+java SearchTest
+```
+
+### 4. Financial Forecasting recursive tool
+```bash
+# Navigate to the FinancialForecasting directory
+cd "week1/Data Structures and Algorithms/FinancialForecasting"
+
+# Compile and Run
+javac *.java
+java ForecastingTest
 ```
