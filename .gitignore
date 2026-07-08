@@ -1,8 +1,9 @@
 # Ignore all files/folders in the root directory by default
 /*
 
-# Do NOT ignore the week1 directory and its contents
+# Do NOT ignore the week1 and week2 directories and their contents
 !/week1/
+!/week2/
 
 # Do NOT ignore this .gitignore file itself
 !/.gitignore
@@ -12,3 +13,10 @@
 
 # Ignore downloaded jar libraries
 *.jar
+
+# Ignore local Maven installation zip and folder
+/week2/maven.zip
+/week2/maven/
+
+# Ignore Maven build target directories
+**/target/
