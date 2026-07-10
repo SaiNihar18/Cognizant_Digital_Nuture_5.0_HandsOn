@@ -18,7 +18,7 @@ public class OrmLearnApplication {
     public CommandLineRunner demo(CountryService countryService) {
         return args -> {
             System.out.println("\n--- 1. Fetching All Countries ---");
-            countryService.getAllCountries().forEach(System.out.println);
+            countryService.getAllCountries().forEach(System.out::println);
 
             System.out.println("\n--- 2. Find Country by Code 'IN' ---");
             Country in = countryService.findCountryByCode("IN");
