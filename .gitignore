@@ -4,6 +4,7 @@
 # Do NOT ignore the week1 and week2 directories and their contents
 !/week1/
 !/week2/
+!/week3/
 
 # Do NOT ignore this .gitignore file itself
 !/.gitignore

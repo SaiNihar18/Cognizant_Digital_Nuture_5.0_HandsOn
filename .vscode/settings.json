@@ -22,6 +22,10 @@
         "week1/Data Structures and Algorithms/TaskManagement",
         "week1/Data Structures and Algorithms/LibrarySearch",
         "week1/JUnit and Mockito",
-        "week1/SLF4J Logging"
+        "week1/SLF4J Logging",
+        "week2/Spring Core and Maven/LibraryManagement",
+        "week2/Spring Data JPA/orm-learn",
+        "week2/Spring Data JPA/EmployeeManagementSystem",
+        "week3/Spring REST/spring-rest-service"
     ]
 }
