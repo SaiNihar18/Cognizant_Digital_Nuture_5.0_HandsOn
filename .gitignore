@@ -7,6 +7,8 @@
 
 # Do NOT ignore this .gitignore file itself
 !/.gitignore
+!/pom.xml
+!/.vscode/
 
 # Ignore compiled Java class files
 *.class
