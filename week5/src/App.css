@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --background-light: #f8fafc;
+    --background-dark: #0f172a;
+    --card-light: #ffffff;
+    --card-dark: #1e293b;
+    --text-light: #1e293b;
+    --text-dark: #f8fafc;
+    --border-light: #e2e8f0;
+    --border-dark: #334155;
+    --transition-speed: 0.3s;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+    color: #ffffff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #a5b4fc, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-item {
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+.nav-item:hover, .nav-item.active {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.card {
+    background-color: var(--card-light);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    transition: background-color var(--transition-speed), border-color var(--transition-speed);
+}
+
+body.dark-mode .card {
+    background-color: var(--card-dark);
+    border-color: var(--border-dark);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color var(--transition-speed), transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+input, textarea, select {
+    background-color: var(--card-light);
+    border: 1px solid var(--border-light);
+    color: var(--text-light);
+    padding: 10px;
+    border-radius: 6px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color var(--transition-speed);
+}
+
+body.dark-mode input, body.dark-mode textarea, body.dark-mode select {
+    background-color: var(--card-dark);
+    border-color: var(--border-dark);
+    color: var(--text-dark);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-color);
+}

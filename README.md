@@ -30,3 +30,10 @@ Microservices and Gateway:
 - **Eureka Server**: Service registry module.
 - **Account & Loan Services**: Independent client services registering to Eureka.
 - **API Gateway**: Spring Cloud Gateway routing rules and request logging filters.
+
+### [Week 5](file:///e:/Projects/Java FSE/week5/)
+Frontend UI & State:
+- **React Components**: Functional/Class components, Props, and state hooks.
+- **Lifecycle & Events**: Interceptors, timers, and interactive hooks.
+- **Forms & Services**: Validations, lists, Context API themes, and REST consumer tables.
+- **Unit Testing**: Tests configured using Vitest runner.
