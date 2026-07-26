@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Cohort Details Component > should always render same html 1`] = `
+<DocumentFragment>
+  <div
+    class="cohort-details-card"
+    style="padding: 20px; border: 1px solid rgb(204, 204, 204); border-radius: 8px; background: rgb(255, 255, 255);"
+  >
+    <h3>
+      CH-JAVA-001
+    </h3>
+    <h4>
+      Java Full Stack Developer Cohort
+    </h4>
+    <p>
+      <strong>
+        Start Date:
+      </strong>
+       2026-05-01
+    </p>
+  </div>
+</DocumentFragment>
+`;
