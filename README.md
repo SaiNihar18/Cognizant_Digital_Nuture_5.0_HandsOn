@@ -44,3 +44,10 @@ Frontend Testing & Mocking:
 - **GitClient**: Service executing Axios calls to fetch repository lists.
 - **Component Testing**: Verifies prop configuration, h3 code display, and snapshot stability.
 - **Mock Testing**: Vitest mocks isolating request boundaries.
+
+### [Week 7](file:///e:/Projects/Java FSE/week7/)
+Platforms, DevOps & Containerization:
+- **Git Automation**: Automated branch checkout, conflict resolution, stashing, and directory cleaning.
+- **Docker**: Containerization using multi-stage Dockerfiles and compose orchestrators.
+- **CI/CD**: Pre-configured GitHub Actions build and test execution workflows.
+- **Cloud & GenAI**: Deployment topologies for AWS/Azure and structured prompting patterns.
