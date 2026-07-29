@@ -4,16 +4,16 @@ This directory contains the hands-on implementation of Platforms training module
 
 ## Directory Structure
 
-* **[Git/](file:///e:/Projects/Java FSE/week7/Git/)**: Contains `simulate_git_flow.bat` which automates:
+* **[Git/](./Git/)**: Contains `simulate_git_flow.bat` which automates:
   - Initializing local Git workspaces.
   - Branching and checkout.
   - Generating and resolving merge conflicts.
   - Stashing, popping, and directory cleaning.
-* **[Docker/](file:///e:/Projects/Java FSE/week7/Docker/)**: Contains:
+* **[Docker/](./Docker/)**: Contains:
   - `Dockerfile`: Multi-stage build compilation and server serving.
   - `docker-compose.yml`: Multi-container service definitions.
-* **[CI-CD/](file:///e:/Projects/Java FSE/week7/CI-CD/)**: Contains `github-action-ci.yml` defining automated build jobs for Java Maven and React npm.
-* **[Cloud-GenAI/](file:///e:/Projects/Java FSE/week7/Cloud-GenAI/)**: Contains `reference_guide.md` specifying cloud microservice topologies (AWS/Azure) and prompting formats.
+* **[CI-CD/](./CI-CD/)**: Contains `github-action-ci.yml` defining automated build jobs for Java Maven and React npm.
+* **[Cloud-GenAI/](./Cloud-GenAI/)**: Contains `reference_guide.md` specifying cloud microservice topologies (AWS/Azure) and prompting formats.
 
 ---
 
